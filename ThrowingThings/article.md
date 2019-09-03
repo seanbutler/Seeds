@@ -1,18 +1,22 @@
 
+# Throwing Things Out
 
-# Throwing Things
-
-
-**I don't like perlin noise.** There I said it. Gosh I feel better already! Though, this improved feeling did perhaps come at the risk of committing procedural blasphemy*.
+_Sean Butler_
 
 
-Most creative programmers would  acknowledge that Perlin Noise is incredibly useful. As a multilayered, scaled, random-ish waveform it can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The ease with which Perlin & other similar noise systems generate the kinds of structures listed above is because they can generate an output with a repeating, but never quite the same pattern.
+**I DON'T LIKE PERLIN NOISE.**
 
 
-One of the most valuable aspect of the algorithm's output is that the variations in the data all of a similar scale. This similar scale effect allows us to use the output data as source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
+There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Of course many procedural developers would say Perlin Noise is incredibly useful, and they'd be right of course.
 
 
-In their vanilla form, the landscapes generated from Perlin noise do tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable (increasing) scale on the y-axis. This has the effect of making the higher points of the landscape more pointy.
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The ease with which Perlin & other similar noise systems generate the kinds of structures listed above is because they can generate an output with a repeating, but never quite the same pattern.
+
+
+One of the valuable aspect of the algorithm's output is that the variations in the data are all of a similar scale. This similarity of scale allows us to use the output data as source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
+
+
+In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the effect of making the higher points of the landscape more pointy. Which more accurately matches the profile of mountains in the world around us.
 
 
 ## Artistry and Authenticity
@@ -49,6 +53,7 @@ Meteor Storm Escape acted as a MVP/prototype for a desert dune racing game.
 
 
 # Tutorial
+
 
 As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos can form is often shaped as a long wiggly line.
 

@@ -1,9 +1,12 @@
 # Seeds
 
-Seeds is a yearly zine which publishes articles on the theme of Procedural Generation.
+[http://www.procjam.com/seeds/](http://www.procjam.com/seeds/)
 
-http://www.procjam.com/seeds/
+Seeds is a yearly online zine which publishes articles on the theme of Procedural Generation.
 
-## 2019 Issue 3
- - [Throwing Things PDF](/ThrowingThings/article.pdf)
- - [Throwing Things Markdown](/ThrowingThings/article.md)
+
+Throwing Things
+
+[PDF](/ThrowingThings/article.pdf)
+
+[Markdown](/ThrowingThings/article.md)
