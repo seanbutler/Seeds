@@ -1,41 +1,12 @@
 
-> **DOCUMENT PLAN**
 
-> **Introduction**
- - Thesis/Statement
- - Quick view of both sides
-
-> **Discussion**
- - Metaphorical Discussion of Perlin Noise
- - Discussion on range of approaches from Pragmatic to Authentic
-
-> **Tutorial & Decisions**
- - **Placement of Islands**
-   - Hot spots
-   - Divergent plate boundaries (such as rifts and mid-ocean ridges), and
-   - Convergent plate boundaries (subduction zones)
-
-> - **Creation of New Landscape**
-   - Erupted Materials
-   - Deposition
-
-> **Results**
-
-> **Discussion**
-
-> **Conclusion**
-
----
-
-### Throwing Things
-
-
+# Throwing Things
 
 
 **I don't like perlin noise.** There I said it. Gosh I feel better already! Though, this improved feeling did perhaps come at the risk of committing procedural blasphemy*.
 
 
-Most creative programmers would  acknowledge that Perlin Noise is incredibly useful. As a multilayered, scaled, random-ish waveform it can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The applicability of Perlin & other similar noise systems to generate the kinds of structures listed above is that they can generate an output with a repeating, but never quite the same pattern.
+Most creative programmers would  acknowledge that Perlin Noise is incredibly useful. As a multilayered, scaled, random-ish waveform it can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The ease with which Perlin & other similar noise systems generate the kinds of structures listed above is because they can generate an output with a repeating, but never quite the same pattern.
 
 
 One of the most valuable aspect of the algorithm's output is that the variations in the data all of a similar scale. This similar scale effect allows us to use the output data as source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.

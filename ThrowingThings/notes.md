@@ -1,4 +1,35 @@
 
+
+**DOCUMENT PLAN**
+
+**Introduction**
+ - Thesis/Statement
+ - Quick view of both sides
+
+**Discussion**
+ - Metaphorical Discussion of Perlin Noise
+ - Discussion on range of approaches from Pragmatic to Authentic
+
+**Tutorial & Decisions**
+ - **Placement of Islands**
+   - Hot spots
+   - Divergent plate boundaries (such as rifts and mid-ocean ridges), and
+   - Convergent plate boundaries (subduction zones)
+
+ - **Creation of New Landscape**
+   - Erupted Materials
+   - Deposition
+
+**Results**
+
+**Discussion**
+
+**Conclusion**
+
+---
+
+
+
 Perlin noise (& other similar value noises)  is commonly used as a source of information to form the basis of landscape algorithms.
 
 A very common application of Perlin Noise is of course to make landscapes, particularly oceanic landscapes.

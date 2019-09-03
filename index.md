@@ -4,6 +4,6 @@ Seeds is a yearly zine which publishes articles on the theme of Procedural Gener
 
 http://www.procjam.com/seeds/
 
-
-[Throwing Things PDF](/ThrowingThings/article.pdf)
-[Throwing Things Markdown](/ThrowingThings/article.md)
+## 2019 Issue 3
+ - [Throwing Things PDF](/ThrowingThings/article.pdf)
+ - [Throwing Things Markdown](/ThrowingThings/article.md)
