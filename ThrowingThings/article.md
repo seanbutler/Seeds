@@ -27,11 +27,12 @@
 
 ---
 
-# Throwing Things
+### Throwing Things
 
-**I don't like perlin noise.**
 
-There I said it. Gosh I feel better already! Though, this improved feeling did perhaps come at the risk of committing procedural blasphemy*.
+
+
+**I don't like perlin noise.** There I said it. Gosh I feel better already! Though, this improved feeling did perhaps come at the risk of committing procedural blasphemy*.
 
 
 Most creative programmers would  acknowledge that Perlin Noise is incredibly useful. As a multilayered, scaled, random-ish waveform it can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The applicability of Perlin & other similar noise systems to generate the kinds of structures listed above is that they can generate an output with a repeating, but never quite the same pattern.
