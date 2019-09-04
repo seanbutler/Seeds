@@ -1,5 +1,5 @@
 
-# Throwing Things Out
+# Throw Perlin Noise Out
 
 _Sean Butler_
 
@@ -7,16 +7,23 @@ _Sean Butler_
 **I DON'T LIKE PERLIN NOISE.**
 
 
-There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Of course many procedural developers would say Perlin Noise is incredibly useful, and they'd be right of course.
+There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Of course many procedural developers would say Perlin Noise is incredibly useful, and they'd be right.
 
 
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, etc. The ease with which Perlin & other similar noise systems generate the kinds of structures listed above is because they can generate an output with a repeating, but never quite the same pattern.
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output data as a source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
 
 
-One of the valuable aspect of the algorithm's output is that the variations in the data are all of a similar scale. This similarity of scale allows us to use the output data as source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
+In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
 
 
-In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the effect of making the higher points of the landscape more pointy. Which more accurately matches the profile of mountains in the world around us.
+![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.jpg)
+
+Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
+
+
+![](./assets/Bacin_zari_2015.jpg)
+
+Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
 
 ## Artistry and Authenticity
@@ -54,9 +61,7 @@ Meteor Storm Escape acted as a MVP/prototype for a desert dune racing game.
 
 # Tutorial
 
-
 As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos can form is often shaped as a long wiggly line.
-
 
 Manipulate Vectors to steer a random walk where we want it to go.
 
@@ -82,6 +87,11 @@ In procedural generation the management of this dual nature has to be handled di
 
 # Conclusion
 
+Authentic and interesting natural structures need so much addition work on top of the source Perlin Noise that we should consider alternatives.
+
+Researchers have developed many high end algorithms for producing authentic natural landscapes. These can be complex to implement and computationally intensive
+
+As we have seen in the tutorial above, passable approximations are achievable which are lightweight customisable, flexible and easy to understand.
 
 ---
 
