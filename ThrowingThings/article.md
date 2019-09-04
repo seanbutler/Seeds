@@ -7,16 +7,17 @@ _Sean Butler_
 **I DON'T LIKE PERLIN NOISE.**
 
 
-There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Of course many procedural developers would say Perlin Noise is incredibly useful, and they'd be right.
+There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right.
 
 
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output data as a source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output as a source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
 
 
 In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
 
 
-![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.jpg)
+![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
+
 
 Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 
@@ -26,24 +27,16 @@ Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
 
-## Artistry and Authenticity
 
 
-![](./assets/MtCleveland_ISS013-E-24184.jpg)
 
-_ISS Crew Earth Observations experiment and the Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
-
-
-Removing the primary physical aspect of a gameplay challenge in making it a simulation based challenge means the space often needs to be amplified for fun to occur, consider the tracks of SSX in comparison with your own experience of skiing, perhaps. Authentic Artefacts often don't make for great video game gameplay.
+Removing the primary physical aspect of a gameplay challenge in making it a simulation based challenge means the space often needs to be amplified for fun to occur, consider the tracks of SSX in comparison with your own experience of skiing. Perhaps authentic artefacts don't always make for great video game gameplay?
 
 
-In authentic artefacts can remind the player they are in a simulation which might not be what you as a designer want. Normalisation, conventions and suspension of disbelief go some way to ameliorate this.
+Inauthentic artefacts can remind the player they are in a simulation which might not be what you as a designer want. Normalisation, conventions and suspension of disbelief go some way to ameliorate this.
 
 
-At one end we have arbitrary algorithms and heuristics which generate forms useful in a variety of domains.
-
-
-At the other end we can have simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
+So, at one end we have arbitrary algorithms and heuristics which generate forms useful in a variety of domains. At the other end we can have simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
 
 
 Recently a student I supervised built a system to generate levels for a real-time strategy game. Along with a variety of other techniques, they used a cellular automata to distribute the placement of trees within little forests across the map. While inspired by biology the mathematical features of the cellular automata have little or nothing in common with the systems of pressures on tree populations in the countryside.  
@@ -55,15 +48,17 @@ Consider Chris Ofili's use of elephant dung, one could argue that the exact shad
 Academic or scientific approaches to procedural generation of sand dunes often has the goal of generating natural shaped landscapes.
 
 
-Meteor Storm Escape acted as a MVP/prototype for a desert dune racing game.
+Meteor Storm Escape acted as a MVP/prototype for a desert dune racing game. At every stage we compromised authenticity for a particular challenging and exhilarating player experience.
+
 ![](assets/MeteorStorm_Screengrab01_2012_04_10.png)
 
 
 # Tutorial
 
-As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos can form is often shaped as a long wiggly line.
+As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos can form is often shaped as a long wiggly line. Simulations of plate tectonics exist, I've yet to hear of a game which uses it to determine gameplay. If anyone knows a bit about it, get in-touch, perhaps we can work together? Its simple enough with a move, turn, loop to manipulate a sequence of vectors to steer a random walk in a particular direction. Parameterising the length of the vectors and the range and shape of random numbers for orientation, we can create a more or less linear (chaotic) path to represent the place where two parts of the world's crust are moving together or apart.
 
-Manipulate Vectors to steer a random walk where we want it to go.
+
+
 
 
 # Results
@@ -72,6 +67,11 @@ Manipulate Vectors to steer a random walk where we want it to go.
 
 ![](assets/Untitled.png)
 
+
+![](./assets/MtCleveland_ISS013-E-24184.jpg)
+
+_ISS Crew Earth Observations experiment and the Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
+
 In each case the islands generated show convex and concave features around their edges, this is in keeping with authentic natural landscapes, and depending on scale and designer goals could be instrumental in achor detracting from gameplay goals.
 
 The algorithm demonstrated is primarily for the generation of shape, so as such the islands arent rendered with specialist shaders including waters edge, greenery, rock and snow.
@@ -79,7 +79,7 @@ The algorithm demonstrated is primarily for the generation of shape, so as such 
 
 # Discussion
 
-Aesthetics of visuals and space in games is different from that in the traditional visual arts. As game developers we must balance the goals of the visual form against the goals of the gameplay form.
+The aesthetics of space and visuals in games is different from that in the traditional visual arts. As game developers we must balance the needs of the visual form against the needs of the gameplay form.
 
 In big studio production this is often done by having white/orange boxing and by having gameplay collision mesh built in parallel with the gameplay design and tested against that gameplay as a separate process from the (later) art generation.
 

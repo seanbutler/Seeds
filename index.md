@@ -4,8 +4,7 @@
 
 Seeds is a yearly online zine which publishes articles on the theme of Procedural Generation.
 
-
-Throwing Things
+## Throwing Things
 
 [PDF](/ThrowingThings/article.pdf)
 
