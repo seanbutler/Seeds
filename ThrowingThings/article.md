@@ -4,16 +4,16 @@
 _Sean Butler_
 
 
-**I DON'T LIKE PERLIN NOISE.**
+__I DON'T LIKE PERLIN NOISE__ There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right.
+
+## The Problem with Noise
+
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output as a source for rolling hills or oceanic islands or other features which should all be different, but are created by the same processes so should be of similar scale.
 
 
-There I said it. Gosh I feel better already! Though, this improved feeling does perhaps come at the risk of committing procedural blasphemy*. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right.
+In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy.
 
-
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output as a source for rolling hills or islands or other features which should all be different, but are created by the same processes so should be of similar scale.
-
-
-In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
+One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
@@ -26,39 +26,79 @@ Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 
 Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
+# Do Procedural Artefacts even have to be Authentic?
+
+Removing the primary physical aspect of a gameplay challenge in making it a simulation based challenge means the gameplay space often needs to be amplified for fun to occur, consider the tracks of SSX in comparison with your own experience of skiing. Perhaps authentic artefacts don't always make for great video game gameplay?
 
 
+Inauthentic artefacts can remind the player they are in a simulation and this might not be what you as a designer want. Normalisation, conventions and suspension of disbelief go some way to ameliorate this.
 
 
-Removing the primary physical aspect of a gameplay challenge in making it a simulation based challenge means the space often needs to be amplified for fun to occur, consider the tracks of SSX in comparison with your own experience of skiing. Perhaps authentic artefacts don't always make for great video game gameplay?
+Recently a student built a system to generate levels for a real-time strategy game. Along with various other techniques, they used a cellular automata to distribute the placement of trees within little forests across the map. While inspired by biology the mathematical features of the cellular automata have little or nothing in common with the systems of pressures on tree populations in the countryside.  
 
 
-Inauthentic artefacts can remind the player they are in a simulation which might not be what you as a designer want. Normalisation, conventions and suspension of disbelief go some way to ameliorate this.
+Consider Chris Ofili's use of elephant dung. One could argue that the exact shades he needs for the supports and other round features in his paintings could more easily and cheaply be produced with other materials. Conversely reflect on Damien Hurst's spot paintings, some of which are shipped to their buyer as a series of pots of paint and instructions. Hurst himself states the best spot painting to be had was painted by an assistant. So from the perspective of the artist, and art market the necessity for authenticity is a movable requirement.
 
 
-So, at one end we have arbitrary algorithms and heuristics which generate forms useful in a variety of domains. At the other end we can have simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
+Academic or scientific approaches to procedural generation of sand dunes often have the goal of generating natural shaped landscapes. When accurate they can be extremely complex, and result in generation of landscapes which although authentic are not appropriate for gameplay. Journey has extensive dunes and because its gameplay relies on them, uses hand designed landscapes with interpolation and mathematically complex rendering of sand and light to add visual and emotional interest.
 
 
-Recently a student I supervised built a system to generate levels for a real-time strategy game. Along with a variety of other techniques, they used a cellular automata to distribute the placement of trees within little forests across the map. While inspired by biology the mathematical features of the cellular automata have little or nothing in common with the systems of pressures on tree populations in the countryside.  
-
-
-Consider Chris Ofili's use of elephant dung, one could argue that the exact shades he needs for the supports and other round features in his paintings could more easily and cheaply be produced with other materials. Conversely reflect on Damien Hurst's spot paintings, some of which are shipped to their buyer as a series of pots of paint and instructions. Hurst himself states the best spot painting to be had was painted by an assistant. So from the perspective of the artist, and art market the necessity for authenticity is a movable requirement.
-
-
-Academic or scientific approaches to procedural generation of sand dunes often has the goal of generating natural shaped landscapes.
-
-
-Meteor Storm Escape acted as a MVP/prototype for a desert dune racing game. At every stage we compromised authenticity for a particular challenging and exhilarating player experience.
+In Meteor Storm Escape we included a desert dune racing level among others, at every step of development we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
 
 ![](assets/MeteorStorm_Screengrab01_2012_04_10.png)
 
 
-# Tutorial
-
-As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos can form is often shaped as a long wiggly line. Simulations of plate tectonics exist, I've yet to hear of a game which uses it to determine gameplay. If anyone knows a bit about it, get in-touch, perhaps we can work together? Its simple enough with a move, turn, loop to manipulate a sequence of vectors to steer a random walk in a particular direction. Parameterising the length of the vectors and the range and shape of random numbers for orientation, we can create a more or less linear (chaotic) path to represent the place where two parts of the world's crust are moving together or apart.
+As developers we all have a choice of strategies, from arbitrary algorithms and heuristics which generate forms useful for gameplay or other reasons, to simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
 
 
+## A Simple Algorithm to Generate Oceanic Landscapes With Authentic Contours and Gameplay Fit
 
+As we've already seen that due to plate tectonics the thin parts of the earths crust where volcanos form can be shaped as a long wiggly line. Simulations of plate tectonics exist, though I've yet to hear of a game which uses it to determine gameplay[^2]. Its simple enough with a move, turn, loop to manipulate a sequence of vectors to steer a random walk in a particular direction.
+
+Parameterising the length of the vectors and size of change in orientation, we can create a more or less linear (or chaotic) path to represent the place where two parts of the world's crust are moving together or apart.
+
+~~~
+var rotation = constAngle * ((Math.random() + Math.random())-1)
+Turn (0.0, 1.0, 0.0, rotation)
+var distance = constDist * ( 0.5 * (Math.random() + Math.random()))
+Move (0.0, 0.0, 1.0, distance)
+~~~
+
+Increasing _constAngle_ to a full circle will cause the path to be so wriggly it becomes a pure random walk. Decreasing it to a smaller number will push the random walk off in a direction.
+
+![](./assets/IMG_4253.JPG)
+
+This approach is of course entirely in-authentic in that it bears no relationship with the forces involved in the joining or separating of two tectonic plates. However it _can_ easily be tweaked to produce sequences which either bear a resemblance to the jagged shape of the Mid-Atlantic Ridge or match specific gameplay requirements such as maximum distance between islands.
+
+
+Throwing out stuff to build the landscape. In a gross simplification lets assume that the direction and velocity of ejecta is completely random, but the random distribution of the angle of ejection follows some variant of a bell curve.
+
+~~~
+var angle = (( Math.random() *  Math.PI/2) + ( Math.random() *  Math.PI/2)) /3;
+var direction = Math.random() * ( 2 * Math.PI);
+var velocity = minvel + (Math.random() * 2);
+~~~
+
+One could run a physics simulation and generate lots of particles and throw them out using an engine's built in physics, but this is a quite heavyweight solution and not always an option. We can do the same thing algebraically with one line of code.
+
+We can calculate the approx landing point of the lava which is thrown out of the volcano using a simple equation.
+
+~~~
+var distance = ( (velocity * velocity) * Math.sin( 2 * angle ) ) / 10;
+~~~
+
+This says the distance away that something lands is proportional to the square of its velocity times the sine of the angle it is ejected at, divided by the gravitational acceleration. The value of 10 is an approximation of gravity which is 9.8 m/s.
+
+
+
+
+
+
+
+![](./assets/IMG_4254.JPG)
+
+
+![](./assets/IMG_4255.JPG)
 
 
 # Results
@@ -85,16 +125,18 @@ In big studio production this is often done by having white/orange boxing and by
 
 In procedural generation the management of this dual nature has to be handled differently. Lots of current procedural generation seems to closely tie or consider identical the visuals and gameplay space.
 
-# Conclusion
+Authentic and interesting natural structures need addition work on top of the source Perlin Noise. Researchers have developed many high end algorithms for producing authentic natural landscapes. These can be complex to implement and computationally intensive.
 
-Authentic and interesting natural structures need so much addition work on top of the source Perlin Noise that we should consider alternatives.
-
-Researchers have developed many high end algorithms for producing authentic natural landscapes. These can be complex to implement and computationally intensive
+Generally for an easy approach to specific landscapes, consider alternatives. Drop the standard dichotomy of Perlin vs Simulation and go for a hybrid approach, build arbitrary authentic algorithms.
 
 As we have seen in the tutorial above, passable approximations are achievable which are lightweight customisable, flexible and easy to understand.
 
----
 
-* A better kind of procedural blasphemy might be an 'electric sinner'. Use logic and NLP to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without actually committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
 
----
+
+
+[^1]:  
+A better kind of procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without actually committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
+
+[^2]:
+If anyone knows a bit plate tectonics please, get in-touch, perhaps we can work together?
