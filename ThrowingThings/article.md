@@ -18,7 +18,6 @@ One particular way is to provide a variable increasing scale on the y-axis. This
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
 
-
 Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 
 
