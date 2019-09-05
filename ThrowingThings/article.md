@@ -1,24 +1,19 @@
 
-# Throw Perlin Noise Out
+# Throwing Things
 
-_Sean Butler_
+Sean Butler
+
 sean2.butler@uwe.ac.uk
-University of the West of England
-Bristol UK
 
----
-
-__I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already! This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right.
-
-## The Problem with Noise
-
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can generate an output with a repeating, but never quite the same pattern. One of the valuable aspect of the algorithm's output is that the variations in the data can all be of a similar scale. This similarity of scale allows us to use the output as a source for rolling hills or oceanic islands or other features which should all be different, but are created by the same processes so should be of similar scale.
+University of the West of England, Bristol, UK
 
 
-In their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy.
+__I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already! This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right. Its also quite complicated and for some developers opaque.
+
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can produce an output with a repeating, but never quite the same pattern. One of the valuable aspect of these algorithm's output is that the variations in the data can all be of a similar scale. This similar scale allows us to use the output as a source for rolling hills or oceanic islands or other features which should all be different, but are created by the same processes so should be of related sizes.
 
 
-One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
+However, especially in their vanilla form, the landscapes generated from Perlin noise tend to have a characteristic shape. Luckily for us we can influence that shape. So, most developers put in additional manipulations to create the geographic structures we all enjoy. One particular way is to provide a variable increasing scale on the y-axis. This has the desirable effect of making the higher points of the landscape more pointy. Which more accurately matches the profiles of mountains and hills in the world around us.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
@@ -30,7 +25,8 @@ Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 
 Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
-## Do Procedural Artefacts even have to be Authentic?
+
+<!-- ## Do Procedural Artefacts even have to be Authentic? -->
 
 Removing the primary physical aspect of a gameplay challenge in making it a simulation based challenge means the gameplay space often needs to be amplified for fun to occur, consider the tracks of SSX in comparison with your own experience of skiing. Perhaps authentic artefacts don't always make for great video game gameplay?
 
@@ -128,11 +124,14 @@ meshVertex.y += 0.01;
 
 # Discussion
 
+As you can see below the mountains generated have a variety of profiles, sometimes with caldera, sometimes elongated, sometimes pointy and jagged. When in water the islands generated show convex and concave features around their edges. This is in keeping with authentic natural landscapes, and depending on scale and designer goals could be instrumental in achor detracting from gameplay goals.
+
 <!-- ![](./assets/Screenshot_20190905_111611.png)
 ![](./assets/Screenshot_20190905_111741.png)
 ![](./assets/Screenshot_20190905_111931.png)
 ![](./assets/Screenshot_20190905_114637.png)
 ![](./assets/Screenshot_20190905_114648.png) -->
+
 ![](./assets/Screenshot_20190905_114703.png)
 ![](./assets/Screenshot_20190905_114752.png)
 ![](./assets/Screenshot_20190905_114846.png)
@@ -146,7 +145,7 @@ Here is a real volcano surrounded by water for comparison.
 _ISS Crew Earth Observations experiment and the Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
 
 
-In each case the mountains generated have a variety of profiles, sometimes with caldera, sometimes elongated, sometimes pointy and jagged. When in water the islands generated show convex and concave features around their edges. This is in keeping with authentic natural landscapes, and depending on scale and designer goals could be instrumental in achor detracting from gameplay goals.
+
 
 
 The algorithm demonstrated is primarily for the generation of shape, so as such the islands arent rendered with specialist shaders or textures including waters edge, greenery, rock and snow etc

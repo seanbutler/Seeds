@@ -6,6 +6,7 @@ Seeds is a yearly online zine which publishes articles on the theme of Procedura
 
 ## Throwing Things
 
-[PDF](/ThrowingThings/article.pdf)
+An article about why we shouldnt use 'noise' systems in procedural generation and that simulations inspired by reality get better results, are easier to understand and simpler to tweak.  
 
 [Markdown](/ThrowingThings/article.md)
+[PDF](/ThrowingThings/article.md.pdf)
