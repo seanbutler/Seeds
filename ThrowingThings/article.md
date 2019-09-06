@@ -54,14 +54,14 @@ We could generate rigid bodies and run the engine's physics system. A simulation
 var distance = ( (velocity * velocity) * Math.sin( 2 * angle ) ) / 9.8
 ~~~
 
-The distance away that something lands is proportional to the square of velocity times the sine of the angle it is ejected at, divided by the gravity. This assumes the ejection point isn't higher or lower than the landing point which for our purposes is fine. Simple trigonometry will translate the distance and direction into a vector offset from the centre of the volcanic island.
+The distance away that something lands is proportional to the square of velocity times the sine of the angle it is ejected at, divided by the gravity. This assumes the ejection point isn't higher or lower than the landing point. Simple trigonometry will translate the distance and direction into a vector offset.
 
 ~~~
 var deltax = Math.sin(direction) * distance;
 var deltaz = Math.cos(direction) * distance;
 ~~~
 
-To which we can then do a little maths on to get a vertex index where it lands.
+We can then do a little maths on to get a vertex index where it lands.
 
 ~~~
 var coords = new THREE.Vector3();
@@ -82,7 +82,7 @@ meshVertex.y += 0.01;
 ![](./assets/IMG_4255.JPG)
 
 
-The mountains generated have a various shapes, caldera, ridges, pointy,  jagged etc. When in water the islands generated show convex and concave features around their edges. Giving authentic natural landscapes.
+The mountains generated have a various shapes, caldera, ridges, pointy etc. As islands they show convex and concave features around their edges.
 
 ![](./assets/Screenshot_20190905_114703.png)
 ![](./assets/Screenshot_20190905_114752.png)
@@ -95,7 +95,7 @@ The mountains generated have a various shapes, caldera, ridges, pointy,  jagged 
 _ISS Earth Observations experiment and Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
 
 
-Producing authentic landscapes is complex and computationally expensive. Instead approximations are lightweight, customisable, flexible and easier to understand. The maths is simple trigonometry and random numbers. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
+Producing authentic landscapes is complex and computationally expensive. Instead approximations are lightweight, flexible and easier to understand. The maths is simple trigonometry and random numbers. Simple algebraic simulations close the 'Gulf of Execution' associated with  procedural generation.
 
 
 
