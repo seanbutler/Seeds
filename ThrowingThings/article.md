@@ -5,9 +5,9 @@ __I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already!
 
 This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many would be right in saying Perlin noise is incredibly useful. Its also quite complicated and for some of us opaque.
 
-As a multilayered, scaled, random-ish waveform Perlin noise can be put to use making Waves, Islands, Caves etc. Perlin & similar noise systems generate these kinds of structures easily because they can produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. Allowing us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
+A multilayered, random-ish waveform, Perlin noise can be put to use making Waves, Islands, Caves etc. Perlin & similar systems generate these structures easily because they produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. Allowing us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
 
-Luckily we can influence the characteristic shape landscapes from Perlin noise can have. Many add tweaks creating appealing geographic structures. One way is to gradually increase scale on the y-axis. With the desirable effect of making the higher points of the landscape more pointy. Giving a profile which matches the mountains and hills all around us.
+Luckily we can influence the characteristic shape the landscapes have. One way is to gradually increase scale on the y-axis, making the higher points of the landscape more pointy. Giving a profile which matches real mountains and hills.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
@@ -20,7 +20,7 @@ Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
 
-When accurate high end approaches to procedural generation of sand dunes can be extremely complex, and result in generation of landscapes which although authentic are not appropriate for gameplay. Journey has extensive dunes and because its gameplay relies on them, uses hand designed landscapes with interpolation and mathematically complex rendering of sand and light to add visual and emotional interest. Conversely in Meteor Storm Escape we included a desert dune racing level among others, at every step of development we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
+High end approaches to procedural generation of sand dunes can be complex and result in landscapes which although authentic may not appropriate for gameplay. Journey has dunes and because its gameplay relies on them, uses hand designed landscapes with interpolation and complex rendering of sand and light to add interest. Conversely in Meteor Storm Escape we included a desert dune racing level, at every step of development we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
 
 ![](assets/MeteorStorm_Screengrab01_2012_04_10.png)
 
@@ -29,7 +29,7 @@ We have a choice of strategies, from arbitrary algorithms and heuristics which g
 
 ## How to Generate Oceanic Landscapes With Realism and Tweakable for Gameplay Fit
 
-Due to plate tectonics the parts of the earths crust where volcanos form can be long wiggly lines. Simulations of plate tectonics exist, though I've yet to hear of a game which uses it to determine gameplay[^2]. Its simple enough with a move-turn, loop to manipulate a sequence of vectors to steer a random walk in a particular direction. Parameterising the length of the vectors and size of change in orientation, we can create a more or less linear path to represent the place where two parts of the world's crust are moving together or apart.
+Due to plate tectonics the places where volcanos form can be long wiggly lines. I've yet to hear of a game which uses simulations of plate tectonics to determine gameplay[^2]. With a move-turn, loop to manipulate a sequence of vectors we can steer a random walk in a direction. Parameterising the length of the vectors and size of change in orientation, to create linear-ish path as the place where the world's crust is thin.
 
 ~~~
 var rotation = constAngle * ((Math.random() + Math.random())-1)
@@ -44,7 +44,7 @@ Increasing _constAngle_ to a full circle will cause the path to be so wriggly it
 
 This approach is entirely in-authentic in that it bears no relationship with the forces involved in the joining or separating of two tectonic plates. However it _can_ easily be tweaked to produce sequences which either bear a resemblance to the jagged shape of the Mid-Atlantic Ridge or match specific gameplay requirements such as maximum distance between islands.
 
-To simplify lets assume that the direction and velocity of ejecta is random, but the angle of ejection follows a vague bell curve.
+Assuming that the direction and velocity of ejecta is random, but the angle of ejection follows a vague bell curve.
 
 ~~~
 var angle = (( Math.random() *  Math.PI/2) + ( Math.random() *  Math.PI/2)) /3
@@ -114,4 +114,4 @@ Algorithms producing realistic natural landscapes, can be complex and computatio
 [^1]: A better procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
 
 
-[^2]: Do you know plate tectonics? Please, get in-touch, perhaps we can work together?
+[^2]: Do you know plate tectonics? Please, get in-touch, perhaps we can collaborate?
