@@ -3,11 +3,11 @@
 
 __I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already!
 
-This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many would be right in saying Perlin Noise is incredibly useful. Its also quite complicated and for some of us opaque.
+This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many would be right in saying Perlin noise is incredibly useful. Its also quite complicated and for some of us opaque.
 
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use making Clouds, Waves, Islands, Caves etc. Perlin & other similar noise systems generate these kinds of structures easily because they can produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. This similarity allows us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
+As a multilayered, scaled, random-ish waveform Perlin noise can be put to use making Waves, Islands, Caves etc. Perlin & similar noise systems generate these kinds of structures easily because they can produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. Allowing us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
 
-The landscapes from Perlin noise can have a characteristic shape. Luckily we can influence that shape. Most developers put in additional manipulations to create enjoyable geographic structures. One way is to gradually increase scale on the y-axis. With the desirable effect of making the higher points of the landscape more pointy. Giving a profile which matches the mountains and hills all around us.
+Luckily we can influence the characteristic shape landscapes from Perlin noise can have. Many add tweaks creating appealing geographic structures. One way is to gradually increase scale on the y-axis. With the desirable effect of making the higher points of the landscape more pointy. Giving a profile which matches the mountains and hills all around us.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
@@ -27,7 +27,7 @@ When accurate high end approaches to procedural generation of sand dunes can be 
 We have a choice of strategies, from arbitrary algorithms and heuristics which generate forms useful for gameplay or other reasons, to simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
 
 
-## An (In)authentic Algorithm to Generate Oceanic Landscapes With Realistic Contours and Gameplay Fit
+## How to Generate Oceanic Landscapes With Realism and Tweakable for Gameplay Fit
 
 Due to plate tectonics the parts of the earths crust where volcanos form can be long wiggly lines. Simulations of plate tectonics exist, though I've yet to hear of a game which uses it to determine gameplay[^2]. Its simple enough with a move-turn, loop to manipulate a sequence of vectors to steer a random walk in a particular direction. Parameterising the length of the vectors and size of change in orientation, we can create a more or less linear path to represent the place where two parts of the world's crust are moving together or apart.
 
@@ -44,8 +44,7 @@ Increasing _constAngle_ to a full circle will cause the path to be so wriggly it
 
 This approach is entirely in-authentic in that it bears no relationship with the forces involved in the joining or separating of two tectonic plates. However it _can_ easily be tweaked to produce sequences which either bear a resemblance to the jagged shape of the Mid-Atlantic Ridge or match specific gameplay requirements such as maximum distance between islands.
 
-
-Throwing out stuff to build the landscape. In a gross simplification lets assume that the direction and velocity of ejecta is completely random, but the random distribution of the angle of ejection follows some variant of a bell curve.
+To simplify lets assume that the direction and velocity of ejecta is random, but the angle of ejection follows a vague bell curve.
 
 ~~~
 var angle = (( Math.random() *  Math.PI/2) + ( Math.random() *  Math.PI/2)) /3
@@ -109,22 +108,10 @@ To focus on the shape generated, we havn't rendered with specialist shaders.
 _ISS Crew Earth Observations experiment and the Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
 
 
-The aesthetics of space and visuals in games is different from that in the traditional visual arts. As game developers we must balance the needs of the visual form against the needs of the gameplay form.
+Algorithms producing realistic natural landscapes, can be complex and computationally expensive. A metaphorical approach is easier, build passable approximations which are lightweight customisable, flexible and easy to understand. The maths involved is simple relying on GCSE trig and random numbers. The system is understandable and tweak-able. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
 
 
-In big studio production this is often done by having white/orange boxing and by having gameplay collision mesh built in parallel with the gameplay design separate process from the (later) art generation.
+[^1]: A better procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
 
 
-In procedural generation the management of this dual nature has to be handled differently. Often procedural generation closely ties the visuals and gameplay space.
-
-
-High end algorithms producing authentic natural landscapes, can be complex and computationally expensive. A metaphorical approach is easier, build arbitrary authentic algorithms. Passable approximations which are lightweight customisable, flexible and easy to understand.
-
-
-The maths involved is in comparison simple relying on GCSE trig and random numbers. The system is tweak-able by a human designer. with input value readily. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
-
-
-[^1]: A better kind of procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without actually committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
-
-
-[^2]: If anyone knows a bit plate tectonics please, get in-touch, perhaps we can work together?
+[^2]: Do you know plate tectonics? Please, get in-touch, perhaps we can work together?
