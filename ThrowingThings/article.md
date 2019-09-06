@@ -3,11 +3,11 @@
 
 __I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already!
 
-This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many procedural developers would say Perlin Noise is incredibly useful and, they'd be right. Its also quite complicated and for some opaque.
+This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many would be right in saying Perlin Noise is incredibly useful. Its also quite complicated and for some of us opaque.
 
-As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways including Clouds, Waves, Islands, Caves etc. Perlin & other similar noise systems generate these kinds of structures easily because they can produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. This similarity allows us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
+As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use making Clouds, Waves, Islands, Caves etc. Perlin & other similar noise systems generate these kinds of structures easily because they can produce a repeating output that is never quite the same. A valuable aspect of the result is that the variations in the data can all be a similar scale. This similarity allows us to use the output as a source for hills or islands etc which should all be different, but are created by the same processes.
 
-However, in their vanilla form, the landscapes from Perlin noise tend to have a characteristic shape. Luckily we can influence that shape. Most developers put in additional manipulations to create enjoyable geographic structures. One way is to gradually increase scale on the y-axis. With the desirable effect of making the higher points of the landscape more pointy. Giving a profile which matches the mountains and hills all around us.
+The landscapes from Perlin noise can have a characteristic shape. Luckily we can influence that shape. Most developers put in additional manipulations to create enjoyable geographic structures. One way is to gradually increase scale on the y-axis. With the desirable effect of making the higher points of the landscape more pointy. Giving a profile which matches the mountains and hills all around us.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
@@ -20,13 +20,11 @@ Public Domain, https://commons.wikimedia.org/w/index.php?curid=4152613
 Webmaster.vinarice [<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Bacin_zari_2015.jpg">via Wikimedia Commons</a>
 
 
-Academic or scientific approaches to procedural generation of sand dunes often have the goal of generating natural shaped landscapes. When accurate they can be extremely complex, and result in generation of landscapes which although authentic are not appropriate for gameplay. Journey has extensive dunes and because its gameplay relies on them, uses hand designed landscapes with interpolation and mathematically complex rendering of sand and light to add visual and emotional interest.
-
-In Meteor Storm Escape we included a desert dune racing level among others, at every step of development we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
+When accurate high end approaches to procedural generation of sand dunes can be extremely complex, and result in generation of landscapes which although authentic are not appropriate for gameplay. Journey has extensive dunes and because its gameplay relies on them, uses hand designed landscapes with interpolation and mathematically complex rendering of sand and light to add visual and emotional interest. Conversely in Meteor Storm Escape we included a desert dune racing level among others, at every step of development we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
 
 ![](assets/MeteorStorm_Screengrab01_2012_04_10.png)
 
-As developers we all have a choice of strategies, from arbitrary algorithms and heuristics which generate forms useful for gameplay or other reasons, to simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
+We have a choice of strategies, from arbitrary algorithms and heuristics which generate forms useful for gameplay or other reasons, to simulations whose internal factors accurately and mathematically replicate the internal states and dynamics of the system found in reality whose aspects we find valuable for our game.
 
 
 ## An (In)authentic Algorithm to Generate Oceanic Landscapes With Realistic Contours and Gameplay Fit
@@ -97,8 +95,6 @@ meshVertex.y += 0.01;
 ![](./assets/IMG_4255.JPG)
 
 
-# Discussion
-
 The mountains generated have a various shapes, sometimes with caldera, sometimes elongated, sometimes pointy and jagged. When in water the islands generated show convex and concave features around their edges. Giving authentic natural landscapes.
 
 ![](./assets/Screenshot_20190905_114703.png)
@@ -122,12 +118,10 @@ In big studio production this is often done by having white/orange boxing and by
 In procedural generation the management of this dual nature has to be handled differently. Often procedural generation closely ties the visuals and gameplay space.
 
 
-Researchers have developed many high end algorithms producing authentic natural landscapes, which are complex to implement and computationally intensive.  
+High end algorithms producing authentic natural landscapes, can be complex and computationally expensive. A metaphorical approach is easier, build arbitrary authentic algorithms. Passable approximations which are lightweight customisable, flexible and easy to understand.
 
 
-For an easy approach to landscapes, go for a hybrid approach, build arbitrary authentic algorithms. Passable approximations are achievable which are lightweight customisable, flexible and easy to understand.
-
-The maths involved is in comparison simple relying on GCSE trig and random numbers. The system is tweak-able by a human designer. While each input value is metaphorical, they have a readily understandable effect on the output. Metaphorical physical simulations (even algebraic ones) are an improvement over traditional noise based approaches because they close the Gulf of Execution commonly associated with complex procedural systems.
+The maths involved is in comparison simple relying on GCSE trig and random numbers. The system is tweak-able by a human designer. with input value readily. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
 
 
 [^1]: A better kind of procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without actually committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
