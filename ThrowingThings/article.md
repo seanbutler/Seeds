@@ -1,13 +1,6 @@
 
 # Throwing Things
 
-Sean Butler
-
-sean2.butler@uwe.ac.uk
-
-University of the West of England, Bristol, UK
-
-
 __I DON'T LIKE PERLIN NOISE__ There I said it. I feel better already! This improved feeling does perhaps come at the risk of committing procedural blasphemy[^1]. Many procedural developers would say Perlin Noise is incredibly useful and, of course, they'd be right. Its also quite complicated and for some developers opaque.
 
 As a multilayered, scaled, random-ish waveform Perlin Noise can be put to use in many ways. Clouds, Waves, Mountains, Islands, Caves, Lava Lamps, Economies, etc. Perlin & other similar noise systems generate these kinds of structures easily because they can produce an output with a repeating, but never quite the same pattern. One of the valuable aspect of these algorithm's output is that the variations in the data can all be of a similar scale. This similar scale allows us to use the output as a source for rolling hills or oceanic islands or other features which should all be different, but are created by the same processes so should be of related sizes.
