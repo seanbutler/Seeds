@@ -1,23 +1,25 @@
 
 __I DON'T LIKE PERLIN NOISE__ There, I feel better already!
 
-This improved feeling comes at the risk of committing procedural blasphemy[^BLASPHEMY]. Many would be right in saying Perlin noise is incredibly useful. Its also quite complicated and for some of us opaque.
+This improved feeling comes at the risk of committing procedural blasphemy[^BLASPHEMY]. You'd be right in saying Perlin noise is very useful. Its also complicated and for some of us opaque.
 
-A multilayered, random-ish waveform, Perlin and other[^MANGLE] noise systems can be put to use making Waves, Islands, Caves etc. Perlin & similar systems generate these structures easily because they produce a repeating output that is never quite the same. The variations in the output can all be a similar scale, allowing us to use it as a source for hills or islands etc which are created by the same geological processes.
+
+A multilayered, random-ish waveform, Perlin and other[^MANGLE] noise systems can be put to use making Waves, Islands, Caves etc. Noise systems generate these structures easily because they produce a repeating output that is never quite the same. Variations in the output are a similar scale and can have a distinctive shape, allowing us to use it as a source for hills or islands etc which are created by the same geological processes.
+
 
 One way to improve the shape of the landscapes is to gradually increase scale on the y-axis, making the higher points of the landscape more pointy. A profile more closely matching mountains and hills.
 
 
 ![](./assets/Main_ridge_of_the_cuillin_in_skye_arp.png)
 
-Public Domain, via Wikimedia Commons
+_Public Domain, via Wikimedia Commons_
 
 ![](./assets/Bacin_zari_2015.jpg)
 
-Webmaster.vinarice CC BY-SA 4.0 via Wikimedia Commons
+_Webmaster.vinarice CC BY-SA 4.0 via Wikimedia Commons_
 
 
-High end procedural generation of sand dunes is complex with authentic outputs that may not appropriate for gameplay. Journey's dunes were hand designed, as the gameplay relied on them. With extra rendering passes to add interest. Conversely in Meteor Storm Escape we included a desert dune racing level, we compromised any idea of authenticity for a particular challenging and exhilarating player experience.
+High end procedural generation of sand dunes is complex with authentic outputs that may not appropriate for gameplay. Journey's gameplay relied on hand designed dunes. Extra rendering passes added interest. Conversely in Meteor Storm Escape we included a dune racing level, we compromised all authenticity for a challenging and exhilarating player experience.
 
 ![](assets/MeteorStorm_Screengrab01_2012_04_10.png)
 
@@ -34,7 +36,7 @@ Move (0.0, 0.0, 1.0, distance)
 
 ![](./assets/IMG_4253.JPG)
 
-This approach is entirely unauthentic in that it bears no relationship with the forces involved in the joining or separating of two tectonic plates. However it can easily be tweaked to produce sequences which either bear a resemblance to the jagged shape of the Mid-Atlantic Ridge or match specific gameplay requirements such as maximum distance between islands.
+This approach bears no relationship with the forces involved in the joining or separating of two tectonic plates, but can easily be tweaked to produce sequences which bear a resemblance to the jagged shape of the Mid-Atlantic Ridge or match specific gameplay requirements such as maximum distance between islands.
 
 Assuming the direction and velocity of ejecta is random, but the angle of ejection follows a bell curve.
 
@@ -46,20 +48,20 @@ var velocity = minvel + (Math.random() * 2)
 
 Adjusting the range and distribution of these values has an impact on the shape of the islands produced. You might prefer more caldera, more sharp jagged peaks etc. Tweak and see what you get.
 
-We could generate physics objects and run the engine's physics system. A good intensive solution not always an option on web or mobile. Instead algebraically with one line of code calculate the approx landing point of the lava which is thrown out of the volcano using a simple equation.
+We could generate rigid bodies and run the engine's physics system. A simulation is not always an option on web or mobile. Instead algebraically, one line of code calculates the approx landing point of that which is thrown out of the volcano.
 
 ~~~
 var distance = ( (velocity * velocity) * Math.sin( 2 * angle ) ) / 9.8
 ~~~
 
-The distance away that something lands is proportional to the square of its velocity times the sine of the angle it is ejected at, divided by the gravity. This assumes the ejection point isn't higher or lower than the landing point which for our purposes is fine. Simple trigonometry will translate the distance and direction into a vector offset from the centre of the volcanic island.
+The distance away that something lands is proportional to the square of velocity times the sine of the angle it is ejected at, divided by the gravity. This assumes the ejection point isn't higher or lower than the landing point which for our purposes is fine. Simple trigonometry will translate the distance and direction into a vector offset from the centre of the volcanic island.
 
 ~~~
 var deltax = Math.sin(direction) * distance;
 var deltaz = Math.cos(direction) * distance;
 ~~~
 
-To which we can then do a little addition on to get a final global position of where the ejecta lands.
+To which we can then do a little maths on to get a vertex index where it lands.
 
 ~~~
 var coords = new THREE.Vector3();
@@ -71,7 +73,7 @@ var meshVertexIndex = ( coords.x * (this.size +1) ) + coords.z;
 
 ![](./assets/IMG_4254.JPG)
 
-The accumulation is incredibly simple, raise the vertex nearest to where it lands!
+Finally raise the vertex a little!
 
 ~~~
 meshVertex.y += 0.01;
@@ -93,8 +95,11 @@ The mountains generated have a various shapes, caldera, ridges, pointy,  jagged 
 _ISS Earth Observations experiment and Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
 
 
-Algorithms producing realistic landscapes, are complex and computationally expensive. Lets build approximations which are lightweight customisable, flexible and easy to understand? The maths involved is simple trigonometry and random numbers. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
+Producing authentic landscapes is complex and computationally expensive. Instead approximations are lightweight, customisable, flexible and easier to understand. The maths is simple trigonometry and random numbers. Metaphorical physical simulations (even algebraic ones) close the Gulf of Execution commonly associated with complex procedural systems.
 
-[^MANGLE]: I'm just going to call all the value noise systems Perlin noise avoid sentence mangling.
 
-[^BLASPHEMY]: A better procedural blasphemy might be an 'electric sinner'. Use AI, logic and natural language processing to codify the core rule set from a religious text. Build a machine to break those rules (in thought, by visualising them, then perhaps automatically tweeting the images, by communication by inciting others to commit sin and finally in action, would need a robot for this one). Is it possible to carry out any of these activities without committing a sin oneself? I suppose we could consider it educational or somewhat like a morality play. (some might say that video games are already doing this)
+
+[^MANGLE]: Lets call all these value noise systems Perlin noise to avoid sentence mangling.
+
+
+[^BLASPHEMY]: An 'electric sinner' could use AI, and NLP to codify the rules of religious texts. Build a machine to break those rules perhaps automatically tweeting results. Maybe inciting others to commit sin and finally in action. Somewhat like a morality play (some might say that video games are already doing this better anyway).
