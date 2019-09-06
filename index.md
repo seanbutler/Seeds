@@ -8,5 +8,8 @@ Seeds is an awesome yearly online zine which publishes articles about Procedural
 
 An article about why we shouldn't use 'noise' systems in procedural generation and that simulations inspired by reality get better results, are easier to understand and simpler to tweak.  
 
-[Markdown](/ThrowingThings/article.md)
-[PDF](/ThrowingThings/article.md.pdf)
+ - [Markdown](/ThrowingThings/article.md)
+ - [PDF](/ThrowingThings/article.pdf)
+
+![](./ThrowingThings/assets/Screenshot_20190905_111931.png)
+![](./ThrowingThings/assets/Screenshot_20190905_114703.png)
