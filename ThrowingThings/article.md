@@ -95,7 +95,7 @@ The mountains generated have a various shapes, caldera, ridges, pointy etc. As i
 _ISS Earth Observations experiment and Image Science &amp; Analysis Group, Johnson Space Center. Public domain via Wikimedia Commons_
 
 
-Producing authentic landscapes is complex and computationally expensive. Instead approximations are lightweight, flexible and easier to understand. The maths is simple trigonometry and random numbers. Simple algebraic simulations close the 'Gulf of Execution' associated with  procedural generation.
+Producing accurate landscapes is complex and computationally expensive, noise systems difficult to tweak. Approximations are lightweight, flexible and easier to understand. The maths is simple trigonometry and random numbers. Simple algebraic simulations close the 'Gulf of Execution' associated with  procedural generation.
 
 
 
